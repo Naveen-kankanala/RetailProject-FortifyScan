@@ -15,10 +15,6 @@ node
     stage('Fortify Scan')
     {
         fortifyScan addJVMOptions: '', addOptions: '', buildID: 'RetailProject-FortifyScan', customRulepacks: '', logFile: '', maxHeap: '', resultsFile: 'RetailProject.fpr'
-    }
-    stage('Fortify Upload')
-    {
-        fortifyUpload appName: 'Retail Project', appVersion: '0.1', failureCriteria: 'category: Path Manipulation', filterSet: '', pollingInterval: '1', resultsFile: 'RetailProject.fpr'
-    }
+    }  
     
 } 
