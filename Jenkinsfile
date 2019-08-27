@@ -1,12 +1,12 @@
 node
 {
-    stage('Fortify Update')
-    {
-        fortifyUpdate proxyPassword: '', proxyURL: '', proxyUsername: '', updateServerURL: 'https://update.fortify.com'
-    }
     stage('Fortify Clean')
     {
      fortifyClean addJVMOptions: '', buildID: 'RetailProject-FortifyScan', logFile: '', maxHeap: ''   
+    }
+    stage('Fortify Update')
+    {
+        fortifyUpdate proxyPassword: '', proxyURL: '', proxyUsername: '', updateServerURL: 'https://update.fortify.com'
     }
     stage('Fortify Translate')
     {
