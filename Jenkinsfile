@@ -1,5 +1,9 @@
 node
 {
+    stage('Git')
+    {
+        git 'https://github.com/vivek-venk/RetailJavaProject.git'
+    }
     stage('Fortify Clean')
     {
      fortifyClean addJVMOptions: '', buildID: 'RetailProject-FortifyScan', logFile: '', maxHeap: ''   
